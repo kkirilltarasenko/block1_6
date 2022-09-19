@@ -1,0 +1,41 @@
+$headerBg: #FFFFFF;
+$headerElemBg: #EAEAEA;
+
+%headerBox {
+  height: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  display: none;
+  width: 100%;
+  background-color: $headerBg;
+
+  .header__container {
+    height: 88px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__logo {
+      width: 187px;
+      @extend %headerBox;
+    }
+
+    .header__icons {
+      width: 290px;
+      @extend %headerBox;
+    }
+
+  }
+}
+
+@media screen and (max-width: 1375px) {
+  .header {
+    display: block;
+  }
+}

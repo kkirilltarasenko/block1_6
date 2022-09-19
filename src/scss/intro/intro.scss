@@ -1,0 +1,298 @@
+$headerColor: #1B1C21;
+$beforeColor: #41F6D7;
+$textColor: #7E7E82;
+$slideActiveBackground: #FFFFFF;
+$slideActiveBorder: #B8FFEC;
+
+%beforeElem {
+  content: "";
+  display: block;
+
+  width: 3px;
+  height: 40px;
+
+  background-color: $beforeColor;
+  margin-right: 20px;
+
+  position: absolute;
+}
+
+.intro {
+  margin-bottom: 51px;
+
+  /* Header */
+
+  .intro__header {
+    padding: 26px 0 9px 0;
+    color: $headerColor;
+
+    display: flex;
+    justify-content: space-between;
+
+    .intro__subtitles {
+      display: flex;
+      align-items: center;
+
+      .intro__subtitle--box {
+        display: flex;
+        align-items: center;
+
+        &:nth-child(1) {
+          margin-right: 32px;
+        }
+
+        .intro__subtitle {
+          margin-right: 18px;
+        }
+
+      }
+
+    }
+
+  }
+
+  /* Slide menu */
+
+  .intro__slide-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 8px 0 15px;
+
+    .intro__slide-menu--item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+
+      width: 210px;
+      height: 40px;
+
+
+      letter-spacing: -0.2px;
+      color: $textColor;
+      font-size: 15px;
+
+      cursor: pointer;
+
+      transition: all .3s ease;
+
+      &:hover {
+        background-color: $slideActiveBackground;
+        border: 2px solid $slideActiveBorder;
+        border-radius: 6px;
+      }
+    }
+
+    .intro__slide-menu--item--active {
+      background-color: $slideActiveBackground;
+      border: 2px solid $slideActiveBorder;
+      border-radius: 6px;
+    }
+
+  }
+
+  /* Reviews */
+
+  .intro__reviews {
+    color: $textColor;
+    font-size: 16px;
+
+    margin-left: 24px;
+    margin-bottom: 19px;
+  }
+
+  /* Content */
+
+  .intro__content {
+    display: flex;
+    justify-content: space-between;
+
+    .intro__content--box {
+
+      .intro__content--text {
+        display: inline-block;
+        max-width: 490px;
+        height: 160px;
+
+        color: $headerColor;
+        font-size: 14px;
+      }
+
+    }
+
+  }
+
+  .intro__content--img {
+    border-radius: 6px;
+
+    object-fit: cover;
+    width: 531px;
+  }
+
+}
+
+@media screen and (max-width: 1400px) {
+  .intro {
+
+    .intro__header {
+
+      .intro__title {
+        &:before {
+          left: 23.01%;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 1400px) {
+  .intro {
+
+    .intro__header {
+
+      .intro__title {
+        &:before {
+          left: 23.01%;
+        }
+
+      }
+
+      .intro__subtitles {
+        display: none;
+      }
+
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 1375px) {
+  .intro {
+
+    .intro__header {
+
+      .intro__title {
+        &:before {
+          left: 0;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 1060px) {
+  .intro {
+
+    .intro__header {
+
+      .intro__title {
+        margin-left: 20px;
+      }
+
+    }
+
+  }
+
+  .intro__slide-menu {
+    overflow: scroll;
+    justify-content: flex-start;
+  }
+
+  .intro__content {
+
+    .intro__content--box {
+
+      .intro__content--text {
+
+        .intro__content--text--hidden {
+          display: none;
+        }
+      }
+
+    }
+
+    .intro__content--img {
+      width: 360px;
+      height: 209px;
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 646px) {
+  .intro {
+
+    .intro__reviews {
+      display: none;
+    }
+
+    .intro__content {
+      max-width: 500px;
+      margin: 0 auto;
+      flex-direction: column;
+
+      .intro__content--box {
+
+      }
+
+      .intro__content--img {
+        margin: 10px auto 0;
+      }
+    }
+
+    .link-box--intro {
+      width: 170px;
+      text-align: right;
+      margin: 0 auto;
+    }
+
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .intro {
+
+    .intro__content {
+
+      .intro__content--box {
+
+        .intro__content--text {
+          height: 100px;
+
+          .intro__content--text--hidden--320 {
+            display: none;
+            margin: 0;
+            padding: 0;
+          }
+
+        }
+
+        .link-box--intro {
+          margin: 0;
+        }
+
+      }
+
+      .intro__content--img {
+        width: 320px;
+        height: 220px;
+
+        border-radius: 0;
+      }
+    }
+
+  }
+}
+

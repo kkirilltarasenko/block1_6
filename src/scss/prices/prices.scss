@@ -1,0 +1,243 @@
+$rowBackground: #FFFFFF;
+$headerRowBackground: #F8F8F8;
+$headerText: #7E7E82;
+$rowTextColor: #1B1C21;
+$iconColor: #FF3E79;
+$iconHoverColor: #a92a50;
+
+%prices__item {
+  display: flex;
+  align-items: center;
+
+  color: $rowTextColor;
+  font-size: 14px;
+}
+
+%prices__header--text {
+  color: $headerText;
+  font-size: 14px;
+}
+
+.prices {
+  padding-bottom: 50px;
+
+  .prices__header {
+    width: 100%;
+    max-width: 1008px;
+    height: 54px;
+
+    margin: 15px auto 0;
+
+    display: flex;
+    align-items: center;
+
+    .prices__header-value {
+      width: 50%;
+      @extend %prices__header--text;
+    }
+
+    .prices__header-price {
+      width: 18%;
+      display: flex;
+      justify-content: flex-start;
+      @extend %prices__header--text;
+    }
+
+    .prices__header-time {
+      @extend %prices__header--text;
+    }
+
+  }
+
+  .prices__table {
+    width: 1056px;
+    height: 378px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: $rowBackground;
+
+    border-radius: 6px;
+
+    .prices__row {
+      width: 100%;
+      max-width: 1008px;
+      height: 25%;
+
+      display: flex;
+      justify-content: space-between;
+
+      margin: 0 auto;
+      border-bottom: 2px solid $headerRowBackground;
+
+      &:nth-child(5) {
+        border-bottom: none;
+      }
+
+      .prices__row--value {
+        width: 50%;
+        @extend %prices__item;
+      }
+
+      .prices__row--price {
+        width: 18%;
+        display: flex;
+        justify-content: flex-start;
+        @extend %prices__item;
+      }
+
+      .prices__row--time {
+        width: 20%;
+        @extend %prices__item;
+      }
+
+      .prices__row--btn--box {
+        width: 12%;
+        @extend %prices__item;
+      }
+
+    }
+
+  }
+
+  .prices__text {
+    color: $rowTextColor;
+    font-size: 14px;
+    line-height: 20px;
+
+    margin: 32px 0 16px;
+  }
+
+  .prices__link--box {
+    display: flex;
+    align-items: center;
+
+    .prices__link {
+      font-size: 16px;
+      color: $rowTextColor;
+      margin-right: 10px;
+
+      text-decoration: none;
+      font-family: 'TT Lakes Medium', serif;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1060px) {
+  .prices {
+
+    .prices__header {
+      width: 758px;
+    }
+
+    .prices__table {
+      width: 806px;
+
+      .prices__row {
+        width: 758px;
+      }
+
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .prices {
+
+    .prices__header {
+      width: 662px;
+    }
+
+    .prices__table {
+      width: 710px;
+
+      .prices__row {
+        width: 662px;
+      }
+
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 769px) {
+  .prices {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .prices__header {
+      width: 462px;
+    }
+
+    .prices__table {
+      width: 510px;
+
+      .prices__row {
+        width: 462px;
+
+        .prices__row--value {
+          width: 40%;
+          font-size: 11px;
+        }
+
+        .prices__row--price {
+          font-size: 11px;
+        }
+
+        .prices__row--time {
+          font-size: 11px;
+        }
+
+        .prices__row--btn--box {
+
+          .prices__row--btn {
+            width: 119px;
+            height: 22px;
+
+            .prices__row--btn--text {
+              font-size: 9px;
+              margin-right: 7px;
+            }
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 510px) {
+  .prices {
+    padding-top: 32px;
+    display: block;
+
+    .prices__header {
+      display: none;
+    }
+
+    .prices__table {
+      display: none;
+    }
+
+    .prices__link--box {
+      width: 220px;
+      margin: 0;
+    }
+
+    .prices__text {
+      margin-top: 16px;
+    }
+
+  }
+
+}

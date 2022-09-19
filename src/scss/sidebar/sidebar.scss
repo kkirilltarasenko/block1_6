@@ -1,0 +1,155 @@
+$sidebarBgColor: #FFFFFF;
+$linkColor: #1B1C21;
+$linkActiveColor: #7E7E82;
+$elemBg: #41F6D7;
+
+.sidebar {
+  .sidebar__wrapper {
+    width: 320px;
+    padding-top: 16px;
+    height: 100%;
+    background-color: $sidebarBgColor;
+
+    .sidebar__container {
+      width: 276px;
+      padding-left: 19px;
+
+      .sidebar__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .sidebar__nav {
+
+      .sidebar__nav-links {
+        margin-top: 37px;
+        margin-bottom: 213px;
+
+        .sidebar__nav-link {
+          display: flex;
+          align-items: center;
+
+          font-family: 'TT Lakes Medium', serif;
+          font-size: 16px;
+          color: $linkColor;
+          text-decoration: none;
+
+          margin-bottom: 28px;
+
+          transition: color .3s ease;
+
+          .sidebar__nav-link--elem {
+            display: inline-block;
+
+            width: 4px;
+            height: 29px;
+
+            background-color: #41F6D7;
+            border-radius: 2px;
+
+            position: absolute;
+            left: 0;
+
+            opacity: 0;
+
+            transition: opacity .3s ease;
+          }
+
+          &:hover {
+            color: $linkActiveColor;
+          }
+
+          &:hover .sidebar__nav-link--elem {
+            opacity: 1;
+          }
+        }
+
+        .sidebar__nav-link--active {
+          color: $linkActiveColor;
+
+          .sidebar__nav-link--elem {
+            opacity: 1;
+          }
+
+        }
+
+      }
+
+    }
+
+    .sidebar__icons {
+      width: 154px;
+      height: auto;
+
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sidebar__email {
+      display: inline-block;
+
+      color: $linkColor;
+
+      font-size: 16px;
+
+      margin: 17px 0 13px;
+
+      cursor: pointer;
+    }
+
+    .sidebar__phone {
+      display: inline-block;
+
+      font-family: 'TT Lakes Bold', serif;
+      color: $linkColor;
+
+      font-size: 24px;
+
+      cursor: pointer;
+    }
+
+    .sidebar__options {
+      width: 89px;
+
+      display: flex;
+      justify-content: space-between;
+
+      margin-top: 41px;
+
+      .sidebar__option {
+        display: inline-block;
+
+        color: $linkColor;
+        font-size: 16px;
+
+        cursor: pointer;
+
+        transition: color .3s ease;
+
+        &:hover {
+          color: $linkActiveColor;
+        }
+      }
+
+      .sidebar__option--active {
+        color: $linkActiveColor;
+      }
+
+    }
+
+  }
+}
+
+@media screen and (min-width: 1375px) {
+  .sidebar {
+    opacity: 1 !important;
+  }
+}
+
+@media screen and (max-width: 1375px) {
+  .sidebar {
+    display: none;
+  }
+}

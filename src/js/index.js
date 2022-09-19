@@ -1,0 +1,6 @@
+import '../scss/style.scss'
+import './showAllScript/script.js'
+import './slider/slider.js'
+import './modalSidebar/script.js'
+import './modalOrder/script.js'
+import './modalCall/script.js'
